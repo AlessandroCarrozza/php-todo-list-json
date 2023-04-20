@@ -9,25 +9,27 @@ createApp({
     },
     methods: {
         readList() {
-            axios.get('server.php')
+            axios.get("server.php")
                 .then(response => {
                     this.todoList = response.data;
                 })
         },
         addTodo() {
 
-            const data = {
-                todoItem: this.todoItem
-            };
+            if (this.todoItem.length > 0) {
+                const data = {
+                    todoItem: this.todoItem
+                };
 
-            axios.post('server.php', data,
-                {
-                    headers: { 'Content-Type': 'multipart/form-data' }
-                }
-            ).then(response => {
-                this.todoList = response.data;
-                this.todoItem = '';
-            });
+                axios.post("server.php", data,
+                    {
+                        headers: { "Content-Type": "multipart/form-data" }
+                    }
+                ).then(response => {
+                    this.todoList = response.data;
+                    this.todoItem = "";
+                });
+            }
         }
     },
     mounted() {

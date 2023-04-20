@@ -18,8 +18,8 @@
                 <li v-for="todo in todoList" class="list-group-item">{{todo}}</li>
             </ul>
             <div class="input-group mt-3">
-                <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                <button class="btn btn-outline-warning" type="button" id="button-addon1">Inserisci</button>
+                <input type="text" v-model="todoItem" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <button @click="addTodo" class="btn btn-outline-warning" type="button" id="button-addon1">Inserisci</button>
             </div>
         </div>
     </div>

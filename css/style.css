@@ -1,7 +1,7 @@
 .container-mega {
     height: 100vh;
     width: 100vw;
-    background-color: red;
+    background-color: #001632;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,4 +9,10 @@
 
 .container-list {
     width: 300px;
+}
+
+h1 {
+    color: #808a99;
+    text-align: center;
+    font-size: 3rem;
 }
