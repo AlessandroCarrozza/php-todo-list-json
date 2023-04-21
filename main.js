@@ -30,7 +30,7 @@ createApp({
                     this.todoItem = "";
                 });
             }
-        }
+        },
     },
     mounted() {
         this.readList();

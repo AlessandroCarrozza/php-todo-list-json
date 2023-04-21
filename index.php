@@ -15,7 +15,7 @@
         <div class="container-list">
             <h1>Todo List</h1>
             <ul class="list-group">
-                <li v-for="todo in todoList" class="list-group-item">{{todo}}</li>
+                <li v-for="(todo, index) in todoList" class="list-group-item">{{todo}}</li>
             </ul>
             <div class="input-group mt-3">
                 <input type="text" v-model="todoItem" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
